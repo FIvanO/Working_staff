@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wsl_f/FIvanO/Try_Gtest/main.cpp
+
+/home/wsl_f/FIvanO/Try_Gtest/tests.cpp
+main.cpp
+/home/wsl_f/FIvanO/Try_Gtest/main.cpp
+gtest/gtest.h
+-
+
