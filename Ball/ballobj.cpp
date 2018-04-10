@@ -1,6 +1,6 @@
 #include "ballobj.h"
 
-BallObj::BallObj(QObject *parent) : QObject(parent), m_center(60, 60)
+BallObj::BallObj(QObject *parent) : QObject(parent), m_center(120, 120)
 {
 
 }
@@ -13,6 +13,11 @@ bool BallObj::cond() const
 QPoint BallObj::center() const
 {
     return m_center;
+}
+
+int BallObj::CenterY() const
+{
+    return m_CenterY;
 }
 
 void BallObj::run()
@@ -37,4 +42,13 @@ void BallObj::setCenter(QPoint center)
 
     m_center = center;
     emit centerChanged(m_center);
+}
+
+void BallObj::setCenterY(int CenterY)
+{
+    if (m_CenterY == CenterY)
+        return;
+
+    m_CenterY = CenterY;
+    emit CenterYChanged(m_CenterY);
 }

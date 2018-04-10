@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Calculate_t {
-    QByteArrayData data[12];
-    char stringdata0[92];
+    QByteArrayData data[14];
+    char stringdata0[103];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -36,18 +36,20 @@ QT_MOC_LITERAL(1, 10, 11), // "condChanged"
 QT_MOC_LITERAL(2, 22, 0), // ""
 QT_MOC_LITERAL(3, 23, 4), // "cond"
 QT_MOC_LITERAL(4, 28, 8), // "finished"
-QT_MOC_LITERAL(5, 37, 13), // "centerChanged"
-QT_MOC_LITERAL(6, 51, 6), // "center"
-QT_MOC_LITERAL(7, 58, 3), // "run"
-QT_MOC_LITERAL(8, 62, 7), // "setcond"
-QT_MOC_LITERAL(9, 70, 9), // "setBounce"
-QT_MOC_LITERAL(10, 80, 1), // "b"
-QT_MOC_LITERAL(11, 82, 9) // "setCenter"
+QT_MOC_LITERAL(5, 37, 8), // "sendCoor"
+QT_MOC_LITERAL(6, 46, 1), // "y"
+QT_MOC_LITERAL(7, 48, 13), // "centerChanged"
+QT_MOC_LITERAL(8, 62, 6), // "center"
+QT_MOC_LITERAL(9, 69, 3), // "run"
+QT_MOC_LITERAL(10, 73, 7), // "setcond"
+QT_MOC_LITERAL(11, 81, 9), // "setBounce"
+QT_MOC_LITERAL(12, 91, 1), // "b"
+QT_MOC_LITERAL(13, 93, 9) // "setCenter"
 
     },
     "Calculate\0condChanged\0\0cond\0finished\0"
-    "centerChanged\0center\0run\0setcond\0"
-    "setBounce\0b\0setCenter"
+    "sendCoor\0y\0centerChanged\0center\0run\0"
+    "setcond\0setBounce\0b\0setCenter"
 };
 #undef QT_MOC_LITERAL
 
@@ -57,42 +59,44 @@ static const uint qt_meta_data_Calculate[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       7,   14, // methods
-       2,   66, // properties
+       8,   14, // methods
+       2,   74, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       3,       // signalCount
+       4,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   49,    2, 0x06 /* Public */,
-       4,    0,   52,    2, 0x06 /* Public */,
-       5,    1,   53,    2, 0x06 /* Public */,
+       1,    1,   54,    2, 0x06 /* Public */,
+       4,    0,   57,    2, 0x06 /* Public */,
+       5,    1,   58,    2, 0x06 /* Public */,
+       7,    1,   61,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       7,    0,   56,    2, 0x0a /* Public */,
-       8,    1,   57,    2, 0x0a /* Public */,
-       9,    1,   60,    2, 0x0a /* Public */,
-      11,    1,   63,    2, 0x0a /* Public */,
+       9,    0,   64,    2, 0x0a /* Public */,
+      10,    1,   65,    2, 0x0a /* Public */,
+      11,    1,   68,    2, 0x0a /* Public */,
+      13,    1,   71,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Bool,    3,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QPoint,    6,
+    QMetaType::Void, QMetaType::Int,    6,
+    QMetaType::Void, QMetaType::QPoint,    8,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void, QMetaType::Bool,    3,
-    QMetaType::Void, QMetaType::Int,   10,
-    QMetaType::Void, QMetaType::QPoint,    6,
+    QMetaType::Void, QMetaType::Int,   12,
+    QMetaType::Void, QMetaType::QPoint,    8,
 
  // properties: name, type, flags
        3, QMetaType::Bool, 0x00495003,
-       6, QMetaType::QPoint, 0x00495103,
+       8, QMetaType::QPoint, 0x00495103,
 
  // properties: notify_signal_id
        0,
-       2,
+       3,
 
        0        // eod
 };
@@ -105,11 +109,12 @@ void Calculate::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         switch (_id) {
         case 0: _t->condChanged((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 1: _t->finished(); break;
-        case 2: _t->centerChanged((*reinterpret_cast< QPoint(*)>(_a[1]))); break;
-        case 3: _t->run(); break;
-        case 4: _t->setcond((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 5: _t->setBounce((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 6: _t->setCenter((*reinterpret_cast< QPoint(*)>(_a[1]))); break;
+        case 2: _t->sendCoor((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 3: _t->centerChanged((*reinterpret_cast< QPoint(*)>(_a[1]))); break;
+        case 4: _t->run(); break;
+        case 5: _t->setcond((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 6: _t->setBounce((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 7: _t->setCenter((*reinterpret_cast< QPoint(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -129,9 +134,16 @@ void Calculate::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
             }
         }
         {
+            typedef void (Calculate::*_t)(int );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&Calculate::sendCoor)) {
+                *result = 2;
+                return;
+            }
+        }
+        {
             typedef void (Calculate::*_t)(QPoint );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&Calculate::centerChanged)) {
-                *result = 2;
+                *result = 3;
                 return;
             }
         }
@@ -185,13 +197,13 @@ int Calculate::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 7)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 7;
+        _id -= 8;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 7)
+        if (_id < 8)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 7;
+        _id -= 8;
     }
 #ifndef QT_NO_PROPERTIES
    else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
@@ -227,10 +239,17 @@ void Calculate::finished()
 }
 
 // SIGNAL 2
-void Calculate::centerChanged(QPoint _t1)
+void Calculate::sendCoor(int _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 2, _a);
+}
+
+// SIGNAL 3
+void Calculate::centerChanged(QPoint _t1)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 3, _a);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

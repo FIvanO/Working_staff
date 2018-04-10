@@ -1,6 +1,8 @@
 #include "calculate.h"
 #include <QApplication>
 #include <QWidget>
+#include <QDebug>
+#include <QThread>
 
 int Calculate::getBounce() const
 {
@@ -12,7 +14,7 @@ int Calculate::getRad() const
     return rad;
 }
 
-Calculate::Calculate(QObject *parent) : QObject(parent), m_center(120, 120), bounce(1), rad(40)
+Calculate::Calculate(QObject *parent) : QObject(parent), m_center(120, 120), bounce(10), rad(40)
 {
 
 }
@@ -30,9 +32,14 @@ QPoint Calculate::center() const
 void Calculate::run()
 {
     while (cond()) {
-        if (QApplication::activeWindow()->height() - center().ry() <= getRad()) setBounce(-1);
-        else setBounce(1);
+        if (center().ry() == QApplication::activeWindow()->height() - getRad() ||
+            center().ry() == 2 * getRad()) setBounce(getBounce() * (-1));
+        //if (QApplication::activeWindow()->height() - center().ry() <= getRad()) setBounce(getBounce() * (-1));
+        //else setBounce(10);
         m_center.setY(m_center.ry() + getBounce());
+        qDebug() << m_center.ry() + getBounce();
+        emit sendCoor(m_center.ry());
+        QThread::msleep(100);
     }
     emit finished();
 }

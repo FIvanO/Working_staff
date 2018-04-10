@@ -5,6 +5,7 @@
 #include <QThread>
 #include "ballobj.h"
 #include "calculate.h"
+#include <QTimer>
 
 namespace Ui {
 class MainWindow;
@@ -25,6 +26,7 @@ protected:
 
 private slots:
     void on_Start_clicked();
+    void rp();
 
 private:
     Ui::MainWindow *ui;
@@ -32,6 +34,7 @@ private:
     QThread thread_2;
     BallObj ball;
     Calculate calc;
+    QTimer timer;
 };
 
 #endif // MAINWINDOW_H

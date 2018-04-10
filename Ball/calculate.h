@@ -30,6 +30,7 @@ signals:
 
     void condChanged(bool cond);
     void finished();
+    void sendCoor(int y);
     void centerChanged(QPoint center);
 
 public slots:
