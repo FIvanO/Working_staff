@@ -10,19 +10,20 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    file.setFileName("Input.txt");
+    if (file.exists()) {
+        file.open(QIODevice::ReadOnly);
+        QString readY = file.readAll();
+
+    }
     connect(&thread_1, &QThread::started, &ball, &BallObj::run);
     connect(&thread_2, &QThread::started, &calc, &Calculate::run);
-    connect(&calc, &Calculate::finished, &thread_1, &QThread::terminate);
+    //connect(&calc, &Calculate::finished, &thread_1, &QThread::quit);
     connect(&calc, &Calculate::sendCoor, &ball, &BallObj::setCenterY, Qt::DirectConnection);
     connect(&timer, &QTimer::timeout, this, &MainWindow::rp);
     calc.moveToThread(&thread_1);
     ball.moveToThread(&thread_2);
     timer.setInterval(50);
-}
-
-void MainWindow::start()
-{
-
 }
 
 void MainWindow::setBallCenter()
@@ -57,4 +58,10 @@ void MainWindow::on_Start_clicked()
 void MainWindow::rp()
 {
     repaint();
+}
+
+void MainWindow::on_Stop_clicked()
+{
+    ball.setCond(false);
+    calc.setcond(false);
 }

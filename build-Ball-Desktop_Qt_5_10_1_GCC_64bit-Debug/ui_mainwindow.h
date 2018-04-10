@@ -28,6 +28,7 @@ class Ui_MainWindow
 public:
     QWidget *centralWidget;
     QPushButton *Start;
+    QPushButton *Stop;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -42,6 +43,9 @@ public:
         Start = new QPushButton(centralWidget);
         Start->setObjectName(QStringLiteral("Start"));
         Start->setGeometry(QRect(300, 10, 89, 25));
+        Stop = new QPushButton(centralWidget);
+        Stop->setObjectName(QStringLiteral("Stop"));
+        Stop->setGeometry(QRect(300, 50, 89, 25));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -63,6 +67,7 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
         Start->setText(QApplication::translate("MainWindow", "Start", nullptr));
+        Stop->setText(QApplication::translate("MainWindow", "Stop", nullptr));
     } // retranslateUi
 
 };

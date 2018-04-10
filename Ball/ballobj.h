@@ -13,7 +13,6 @@ class BallObj : public QObject
     bool m_cond;
 
     QPoint m_center;
-
     int m_CenterY;
 
 public:
