@@ -19,6 +19,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -27,8 +28,12 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout;
     QPushButton *Start;
     QPushButton *Stop;
+    QPushButton *SpeedUp;
+    QPushButton *SpeedDown;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -37,19 +42,41 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(400, 300);
+        MainWindow->resize(626, 430);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        Start = new QPushButton(centralWidget);
+        widget = new QWidget(centralWidget);
+        widget->setObjectName(QStringLiteral("widget"));
+        widget->setGeometry(QRect(520, 10, 92, 120));
+        verticalLayout = new QVBoxLayout(widget);
+        verticalLayout->setSpacing(6);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        Start = new QPushButton(widget);
         Start->setObjectName(QStringLiteral("Start"));
-        Start->setGeometry(QRect(300, 10, 89, 25));
-        Stop = new QPushButton(centralWidget);
+
+        verticalLayout->addWidget(Start);
+
+        Stop = new QPushButton(widget);
         Stop->setObjectName(QStringLiteral("Stop"));
-        Stop->setGeometry(QRect(300, 50, 89, 25));
+
+        verticalLayout->addWidget(Stop);
+
+        SpeedUp = new QPushButton(widget);
+        SpeedUp->setObjectName(QStringLiteral("SpeedUp"));
+
+        verticalLayout->addWidget(SpeedUp);
+
+        SpeedDown = new QPushButton(widget);
+        SpeedDown->setObjectName(QStringLiteral("SpeedDown"));
+
+        verticalLayout->addWidget(SpeedDown);
+
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 400, 22));
+        menuBar->setGeometry(QRect(0, 0, 626, 22));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -68,6 +95,8 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
         Start->setText(QApplication::translate("MainWindow", "Start", nullptr));
         Stop->setText(QApplication::translate("MainWindow", "Stop", nullptr));
+        SpeedUp->setText(QApplication::translate("MainWindow", "SpeedUp", nullptr));
+        SpeedDown->setText(QApplication::translate("MainWindow", "SpeedDown", nullptr));
     } // retranslateUi
 
 };

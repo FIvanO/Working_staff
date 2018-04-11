@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_BallObj_t {
-    QByteArrayData data[13];
-    char stringdata0[112];
+    QByteArrayData data[14];
+    char stringdata0[121];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -40,15 +40,17 @@ QT_MOC_LITERAL(5, 35, 13), // "centerChanged"
 QT_MOC_LITERAL(6, 49, 6), // "center"
 QT_MOC_LITERAL(7, 56, 14), // "CenterYChanged"
 QT_MOC_LITERAL(8, 71, 7), // "CenterY"
-QT_MOC_LITERAL(9, 79, 3), // "run"
-QT_MOC_LITERAL(10, 83, 7), // "setCond"
-QT_MOC_LITERAL(11, 91, 9), // "setCenter"
-QT_MOC_LITERAL(12, 101, 10) // "setCenterY"
+QT_MOC_LITERAL(9, 79, 8), // "starting"
+QT_MOC_LITERAL(10, 88, 3), // "run"
+QT_MOC_LITERAL(11, 92, 7), // "setCond"
+QT_MOC_LITERAL(12, 100, 9), // "setCenter"
+QT_MOC_LITERAL(13, 110, 10) // "setCenterY"
 
     },
     "BallObj\0finished\0\0condChanged\0cond\0"
     "centerChanged\0center\0CenterYChanged\0"
-    "CenterY\0run\0setCond\0setCenter\0setCenterY"
+    "CenterY\0starting\0run\0setCond\0setCenter\0"
+    "setCenterY"
 };
 #undef QT_MOC_LITERAL
 
@@ -58,30 +60,32 @@ static const uint qt_meta_data_BallObj[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   14, // methods
-       3,   74, // properties
+       9,   14, // methods
+       3,   80, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       4,       // signalCount
+       5,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,   54,    2, 0x06 /* Public */,
-       3,    1,   55,    2, 0x06 /* Public */,
-       5,    1,   58,    2, 0x06 /* Public */,
-       7,    1,   61,    2, 0x06 /* Public */,
+       1,    0,   59,    2, 0x06 /* Public */,
+       3,    1,   60,    2, 0x06 /* Public */,
+       5,    1,   63,    2, 0x06 /* Public */,
+       7,    1,   66,    2, 0x06 /* Public */,
+       9,    0,   69,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       9,    0,   64,    2, 0x0a /* Public */,
-      10,    1,   65,    2, 0x0a /* Public */,
-      11,    1,   68,    2, 0x0a /* Public */,
-      12,    1,   71,    2, 0x0a /* Public */,
+      10,    0,   70,    2, 0x0a /* Public */,
+      11,    1,   71,    2, 0x0a /* Public */,
+      12,    1,   74,    2, 0x0a /* Public */,
+      13,    1,   77,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void,
     QMetaType::Void, QMetaType::Bool,    4,
     QMetaType::Void, QMetaType::QPoint,    6,
     QMetaType::Void, QMetaType::Int,    8,
+    QMetaType::Void,
 
  // slots: parameters
     QMetaType::Void,
@@ -112,10 +116,11 @@ void BallObj::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         case 1: _t->condChanged((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 2: _t->centerChanged((*reinterpret_cast< QPoint(*)>(_a[1]))); break;
         case 3: _t->CenterYChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 4: _t->run(); break;
-        case 5: _t->setCond((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 6: _t->setCenter((*reinterpret_cast< QPoint(*)>(_a[1]))); break;
-        case 7: _t->setCenterY((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 4: _t->starting(); break;
+        case 5: _t->run(); break;
+        case 6: _t->setCond((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 7: _t->setCenter((*reinterpret_cast< QPoint(*)>(_a[1]))); break;
+        case 8: _t->setCenterY((*reinterpret_cast< int(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -145,6 +150,13 @@ void BallObj::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
             typedef void (BallObj::*_t)(int );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&BallObj::CenterYChanged)) {
                 *result = 3;
+                return;
+            }
+        }
+        {
+            typedef void (BallObj::*_t)();
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&BallObj::starting)) {
+                *result = 4;
                 return;
             }
         }
@@ -200,13 +212,13 @@ int BallObj::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 9;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 8)
+        if (_id < 9)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 8;
+        _id -= 9;
     }
 #ifndef QT_NO_PROPERTIES
    else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
@@ -253,6 +265,12 @@ void BallObj::CenterYChanged(int _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 3, _a);
+}
+
+// SIGNAL 4
+void BallObj::starting()
+{
+    QMetaObject::activate(this, &staticMetaObject, 4, nullptr);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

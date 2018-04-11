@@ -20,6 +20,12 @@ int BallObj::CenterY() const
     return m_CenterY;
 }
 
+void BallObj::start()
+{
+    emit starting();
+}
+
+
 void BallObj::run()
 {
 

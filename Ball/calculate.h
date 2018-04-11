@@ -26,12 +26,15 @@ public:
 
     int getRad() const;
 
+    void start();
+
 signals:
 
     void condChanged(bool cond);
     void finished();
     void sendCoor(int y);
     void centerChanged(QPoint center);
+    void starting();
 
 public slots:
     void run();

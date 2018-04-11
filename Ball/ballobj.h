@@ -18,11 +18,13 @@ class BallObj : public QObject
 public:
     explicit BallObj(QObject *parent = nullptr);
 
-bool cond() const;
+    bool cond() const;
 
-QPoint center() const;
+    QPoint center() const;
 
-int CenterY() const;
+    int CenterY() const;
+
+    void start();
 
 signals:
     void finished();
@@ -32,6 +34,8 @@ signals:
     void centerChanged(QPoint center);
 
     void CenterYChanged(int CenterY);
+
+    void starting();
 
 public slots:
     void run();

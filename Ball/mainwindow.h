@@ -28,9 +28,11 @@ private slots:
     void on_Start_clicked();
     void rp();
 
-    void on_pushButton_clicked();
-
     void on_Stop_clicked();
+
+    void on_SpeedUp_clicked();
+
+    void on_SpeedDown_clicked();
 
 private:
     Ui::MainWindow *ui;
