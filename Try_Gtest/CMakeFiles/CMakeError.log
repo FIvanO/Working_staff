@@ -53,3 +53,388 @@ Makefile:126: recipe for target 'cmTC_d03c2/fast' failed
 make: *** [cmTC_d03c2/fast] Error 2
 
 
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_09638/fast"
+/usr/bin/make -f CMakeFiles/cmTC_09638.dir/build.make CMakeFiles/cmTC_09638.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_09638.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_09638.dir/CheckSymbolExists.c.o   -c /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_09638
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_09638.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_09638.dir/CheckSymbolExists.c.o  -o cmTC_09638 -rdynamic 
+CMakeFiles/cmTC_09638.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_09638.dir/build.make:97: recipe for target 'cmTC_09638' failed
+make[1]: *** [cmTC_09638] Error 1
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_09638/fast' failed
+make: *** [cmTC_09638/fast] Error 2
+
+File /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_66405/fast"
+/usr/bin/make -f CMakeFiles/cmTC_66405.dir/build.make CMakeFiles/cmTC_66405.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_66405.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_66405.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_66405
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66405.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_66405.dir/CheckFunctionExists.c.o  -o cmTC_66405 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_66405.dir/build.make:97: recipe for target 'cmTC_66405' failed
+make[1]: *** [cmTC_66405] Error 1
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_66405/fast' failed
+make: *** [cmTC_66405/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f00cd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f00cd.dir/build.make CMakeFiles/cmTC_f00cd.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f00cd.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_f00cd.dir/CheckSymbolExists.c.o   -c /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_f00cd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f00cd.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_f00cd.dir/CheckSymbolExists.c.o  -o cmTC_f00cd -rdynamic 
+CMakeFiles/cmTC_f00cd.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f00cd.dir/build.make:97: recipe for target 'cmTC_f00cd' failed
+make[1]: *** [cmTC_f00cd] Error 1
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f00cd/fast' failed
+make: *** [cmTC_f00cd/fast] Error 2
+
+File /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_78095/fast"
+/usr/bin/make -f CMakeFiles/cmTC_78095.dir/build.make CMakeFiles/cmTC_78095.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_78095.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_78095.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_78095
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78095.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_78095.dir/CheckFunctionExists.c.o  -o cmTC_78095 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_78095.dir/build.make:97: recipe for target 'cmTC_78095' failed
+make[1]: *** [cmTC_78095] Error 1
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_78095/fast' failed
+make: *** [cmTC_78095/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0e8f9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0e8f9.dir/build.make CMakeFiles/cmTC_0e8f9.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0e8f9.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_0e8f9.dir/CheckSymbolExists.c.o   -c /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_0e8f9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0e8f9.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_0e8f9.dir/CheckSymbolExists.c.o  -o cmTC_0e8f9 -rdynamic 
+CMakeFiles/cmTC_0e8f9.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_0e8f9.dir/build.make:97: recipe for target 'cmTC_0e8f9' failed
+make[1]: *** [cmTC_0e8f9] Error 1
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_0e8f9/fast' failed
+make: *** [cmTC_0e8f9/fast] Error 2
+
+File /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fc3de/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fc3de.dir/build.make CMakeFiles/cmTC_fc3de.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fc3de.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_fc3de.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_fc3de
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc3de.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_fc3de.dir/CheckFunctionExists.c.o  -o cmTC_fc3de -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_fc3de.dir/build.make:97: recipe for target 'cmTC_fc3de' failed
+make[1]: *** [cmTC_fc3de] Error 1
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_fc3de/fast' failed
+make: *** [cmTC_fc3de/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_eed1e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_eed1e.dir/build.make CMakeFiles/cmTC_eed1e.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_eed1e.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_eed1e.dir/CheckSymbolExists.c.o   -c /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_eed1e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eed1e.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_eed1e.dir/CheckSymbolExists.c.o  -o cmTC_eed1e -rdynamic 
+CMakeFiles/cmTC_eed1e.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_eed1e.dir/build.make:97: recipe for target 'cmTC_eed1e' failed
+make[1]: *** [cmTC_eed1e] Error 1
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_eed1e/fast' failed
+make: *** [cmTC_eed1e/fast] Error 2
+
+File /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_441c6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_441c6.dir/build.make CMakeFiles/cmTC_441c6.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_441c6.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_441c6.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_441c6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_441c6.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_441c6.dir/CheckFunctionExists.c.o  -o cmTC_441c6 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_441c6.dir/build.make:97: recipe for target 'cmTC_441c6' failed
+make[1]: *** [cmTC_441c6] Error 1
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_441c6/fast' failed
+make: *** [cmTC_441c6/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6053a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6053a.dir/build.make CMakeFiles/cmTC_6053a.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6053a.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_6053a.dir/CheckSymbolExists.c.o   -c /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_6053a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6053a.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_6053a.dir/CheckSymbolExists.c.o  -o cmTC_6053a -rdynamic 
+CMakeFiles/cmTC_6053a.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_6053a.dir/build.make:97: recipe for target 'cmTC_6053a' failed
+make[1]: *** [cmTC_6053a] Error 1
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_6053a/fast' failed
+make: *** [cmTC_6053a/fast] Error 2
+
+File /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3b68a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3b68a.dir/build.make CMakeFiles/cmTC_3b68a.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3b68a.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_3b68a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3b68a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3b68a.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_3b68a.dir/CheckFunctionExists.c.o  -o cmTC_3b68a -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_3b68a.dir/build.make:97: recipe for target 'cmTC_3b68a' failed
+make[1]: *** [cmTC_3b68a] Error 1
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_3b68a/fast' failed
+make: *** [cmTC_3b68a/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e7d52/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e7d52.dir/build.make CMakeFiles/cmTC_e7d52.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e7d52.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_e7d52.dir/CheckSymbolExists.c.o   -c /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_e7d52
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7d52.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_e7d52.dir/CheckSymbolExists.c.o  -o cmTC_e7d52 -rdynamic 
+CMakeFiles/cmTC_e7d52.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_e7d52.dir/build.make:97: recipe for target 'cmTC_e7d52' failed
+make[1]: *** [cmTC_e7d52] Error 1
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_e7d52/fast' failed
+make: *** [cmTC_e7d52/fast] Error 2
+
+File /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d8280/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d8280.dir/build.make CMakeFiles/cmTC_d8280.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d8280.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_d8280.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d8280
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d8280.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_d8280.dir/CheckFunctionExists.c.o  -o cmTC_d8280 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d8280.dir/build.make:97: recipe for target 'cmTC_d8280' failed
+make[1]: *** [cmTC_d8280] Error 1
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_d8280/fast' failed
+make: *** [cmTC_d8280/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_31cfa/fast"
+/usr/bin/make -f CMakeFiles/cmTC_31cfa.dir/build.make CMakeFiles/cmTC_31cfa.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_31cfa.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_31cfa.dir/CheckSymbolExists.c.o   -c /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_31cfa
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31cfa.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_31cfa.dir/CheckSymbolExists.c.o  -o cmTC_31cfa -rdynamic 
+CMakeFiles/cmTC_31cfa.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_31cfa.dir/build.make:97: recipe for target 'cmTC_31cfa' failed
+make[1]: *** [cmTC_31cfa] Error 1
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_31cfa/fast' failed
+make: *** [cmTC_31cfa/fast] Error 2
+
+File /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d77ce/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d77ce.dir/build.make CMakeFiles/cmTC_d77ce.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d77ce.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_d77ce.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d77ce
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d77ce.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_d77ce.dir/CheckFunctionExists.c.o  -o cmTC_d77ce -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d77ce.dir/build.make:97: recipe for target 'cmTC_d77ce' failed
+make[1]: *** [cmTC_d77ce] Error 1
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_d77ce/fast' failed
+make: *** [cmTC_d77ce/fast] Error 2
+
+

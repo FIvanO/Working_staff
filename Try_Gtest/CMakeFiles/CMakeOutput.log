@@ -580,3 +580,199 @@ Linking C executable cmTC_08d06
 make[1]: Leaving directory '/home/wsl_f/FIvanO/Try_Gtest/CMakeFiles/CMakeTmp'
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8f670/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8f670.dir/build.make CMakeFiles/cmTC_8f670.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8f670.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_8f670.dir/CheckIncludeFile.c.o   -c /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_8f670
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8f670.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_8f670.dir/CheckIncludeFile.c.o  -o cmTC_8f670 -rdynamic 
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a04c4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a04c4.dir/build.make CMakeFiles/cmTC_a04c4.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a04c4.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a04c4.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a04c4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a04c4.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_a04c4.dir/CheckFunctionExists.c.o  -o cmTC_a04c4 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8bfd8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8bfd8.dir/build.make CMakeFiles/cmTC_8bfd8.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8bfd8.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_8bfd8.dir/CheckIncludeFile.c.o   -c /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_8bfd8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8bfd8.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_8bfd8.dir/CheckIncludeFile.c.o  -o cmTC_8bfd8 -rdynamic 
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_037e3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_037e3.dir/build.make CMakeFiles/cmTC_037e3.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_037e3.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_037e3.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_037e3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_037e3.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_037e3.dir/CheckFunctionExists.c.o  -o cmTC_037e3 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e2dd8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e2dd8.dir/build.make CMakeFiles/cmTC_e2dd8.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e2dd8.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_e2dd8.dir/CheckIncludeFile.c.o   -c /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_e2dd8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e2dd8.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_e2dd8.dir/CheckIncludeFile.c.o  -o cmTC_e2dd8 -rdynamic 
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6f076/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6f076.dir/build.make CMakeFiles/cmTC_6f076.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6f076.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_6f076.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6f076
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6f076.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_6f076.dir/CheckFunctionExists.c.o  -o cmTC_6f076 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1d912/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1d912.dir/build.make CMakeFiles/cmTC_1d912.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1d912.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_1d912.dir/CheckIncludeFile.c.o   -c /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_1d912
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d912.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_1d912.dir/CheckIncludeFile.c.o  -o cmTC_1d912 -rdynamic 
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c0fca/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c0fca.dir/build.make CMakeFiles/cmTC_c0fca.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c0fca.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_c0fca.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c0fca
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c0fca.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_c0fca.dir/CheckFunctionExists.c.o  -o cmTC_c0fca -rdynamic -lpthread 
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2ea4b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2ea4b.dir/build.make CMakeFiles/cmTC_2ea4b.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2ea4b.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_2ea4b.dir/CheckIncludeFile.c.o   -c /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_2ea4b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ea4b.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_2ea4b.dir/CheckIncludeFile.c.o  -o cmTC_2ea4b -rdynamic 
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a7aa2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a7aa2.dir/build.make CMakeFiles/cmTC_a7aa2.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a7aa2.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a7aa2.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a7aa2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7aa2.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_a7aa2.dir/CheckFunctionExists.c.o  -o cmTC_a7aa2 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_51189/fast"
+/usr/bin/make -f CMakeFiles/cmTC_51189.dir/build.make CMakeFiles/cmTC_51189.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_51189.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_51189.dir/CheckIncludeFile.c.o   -c /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_51189
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51189.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_51189.dir/CheckIncludeFile.c.o  -o cmTC_51189 -rdynamic 
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_70850/fast"
+/usr/bin/make -f CMakeFiles/cmTC_70850.dir/build.make CMakeFiles/cmTC_70850.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_70850.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_70850.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_70850
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_70850.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_70850.dir/CheckFunctionExists.c.o  -o cmTC_70850 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9a04f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9a04f.dir/build.make CMakeFiles/cmTC_9a04f.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9a04f.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_9a04f.dir/CheckIncludeFile.c.o   -c /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_9a04f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9a04f.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_9a04f.dir/CheckIncludeFile.c.o  -o cmTC_9a04f -rdynamic 
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f729c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f729c.dir/build.make CMakeFiles/cmTC_f729c.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f729c.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_f729c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f729c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f729c.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_f729c.dir/CheckFunctionExists.c.o  -o cmTC_f729c -rdynamic -lpthread 
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+
+

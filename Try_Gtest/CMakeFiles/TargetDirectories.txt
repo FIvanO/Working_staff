@@ -1,3 +1,3 @@
-/home/wsl_f/FIvanO/Try_Gtest/CMakeFiles/edit_cache.dir
-/home/wsl_f/FIvanO/Try_Gtest/CMakeFiles/rebuild_cache.dir
-/home/wsl_f/FIvanO/Try_Gtest/CMakeFiles/runTests.dir
+/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/edit_cache.dir
+/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/rebuild_cache.dir
+/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/runTests.dir

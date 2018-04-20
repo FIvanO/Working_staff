@@ -2,6 +2,26 @@
 #include "main.cpp"
 #include <gtest/gtest.h>
 
+//TEST_F(SomeMathFunc, fewPos) {
+//    EXPECT_EQ(1, fact(1));
+//    EXPECT_EQ(6, fact(3));
+//    EXPECT_EQ(3628800, fact(10));
+//}
+
+TEST_P(SomeMathFunc, fewPos1) {
+    EXPECT_EQ(1, fact(1));
+    EXPECT_EQ(6, fact(3));
+    EXPECT_EQ(3628800, fact(10));
+}
+
+INSTANTIATE_TEST_CASE_P(SomeMathFunc, SomeMathFunc, testing::Values(1, 3, 10, 20, 40, 80));
+
+int main(int argc, char *argv[])
+{
+    testing::InitGoogleTest(&argc, argv);
+        return RUN_ALL_TESTS();
+}
+
 /*
 TEST_F(SomeMathFunc, fewPos) {
     EXPECT_EQ(1, fact(1));
@@ -36,13 +56,13 @@ TEST_F(SomeMathFunc, fewT1) {
 }
 */
 
-TEST(SomeMathFunc1, fewPos) {
+/*TEST(SomeMathFunc1, fewPos) {
     EXPECT_EQ(1, fact(1));
     EXPECT_EQ(6, fact(3));
     EXPECT_EQ(3628800, fact(10));
 }
 
-TEST(SomeMathFunc2, fewPos1) {
+TEST_P(SomeMathFunc2, fewPos1) {
     EXPECT_EQ(1, fact(1));
     EXPECT_EQ(6, fact(3));
     EXPECT_EQ(3628800, fact(10));
@@ -66,11 +86,6 @@ TEST(SomeMathFunc5, fewT1) {
     EXPECT_EQ(4, gcd(4, 16));
     EXPECT_EQ(144, gcd(144, 288));
     EXPECT_EQ(1, gcd(123123, 123124));
-}
+}*/
 
-int main(int argc, char *argv[])
-{
-    testing::InitGoogleTest(&argc, argv);
-        return RUN_ALL_TESTS();
-}
 
