@@ -17,16 +17,11 @@ class Calculate : public QObject
 
 public:
     explicit Calculate(QObject *parent = nullptr);
-
     bool cond() const;
-
     QPoint center() const;
-
     int getBounce() const;
-
     int getRad() const;
-
-    void start();
+    bool floor_roof(bool flag);
 
 signals:
 
@@ -34,7 +29,6 @@ signals:
     void finished();
     void sendCoor(int y);
     void centerChanged(QPoint center);
-    void starting();
 
 public slots:
     void run();

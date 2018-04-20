@@ -1,10 +1,8 @@
 #include "ballobj.h"
+#include <QDebug>
+#include <QThread>
 
-BallObj::BallObj(QObject *parent) : QObject(parent), m_center(120, 120)
-{
-
-}
-
+BallObj::BallObj(QObject *parent) : QObject(parent), m_center(120, 120) {}
 bool BallObj::cond() const
 {
     return m_cond;
@@ -20,17 +18,14 @@ int BallObj::CenterY() const
     return m_CenterY;
 }
 
-void BallObj::start()
-{
-    emit starting();
-}
-
-
 void BallObj::run()
 {
-
+    while (cond()) {
+        qDebug() << "Thread 2 is working";
+        QThread::msleep(100);
+    }
+    emit finished();
 }
-
 
 void BallObj::setCond(bool cond)
 {

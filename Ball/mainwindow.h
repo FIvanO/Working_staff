@@ -7,6 +7,7 @@
 #include "calculate.h"
 #include <QTimer>
 #include <QFile>
+#include <QSignalSpy>
 
 namespace Ui {
 class MainWindow;
@@ -35,6 +36,8 @@ private slots:
     void on_SpeedDown_clicked();
 
 private:
+    void closeEvent (QCloseEvent *event);
+    QSignalSpy *m_spy;
     Ui::MainWindow *ui;
     QThread thread_1;
     QThread thread_2;

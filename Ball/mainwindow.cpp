@@ -3,13 +3,15 @@
 #include <QDebug>
 #include <QPainter>
 #include <QTextStream>
-
+#include <QCloseEvent>
+#include <QSignalSpy>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    m_spy = new QSignalSpy(&calc, SIGNAL(sendCoor(int)));
     calc.setCenter(*(new QPoint(width() / 2, height() / 2)));
     file.setFileName("Input.txt");
     if (file.exists()) {
@@ -18,13 +20,12 @@ MainWindow::MainWindow(QWidget *parent) :
         QStringList qsl = readY.split(' ');
         calc.setCenter(*(new QPoint(calc.center().rx(), qsl[0].toInt())));
         calc.setBounce(qsl[1].toInt());
+        file.close();
     }
     connect(&thread_1, &QThread::started, &ball, &BallObj::run);
     connect(&thread_2, &QThread::started, &calc, &Calculate::run);
-//    connect(&calc, &Calculate::starting, &thread_2, &QThread::started);
-//    connect(&ball, &BallObj::starting, &thread_1, &QThread::start);
-    connect(&calc, &Calculate::finished, &thread_2, &QThread::quit);
-    connect(&ball, &BallObj::finished, &thread_1, &QThread::quit);
+    connect(&calc, &Calculate::finished, &thread_2, &QThread::quit, Qt::DirectConnection);
+    connect(&ball, &BallObj::finished, &thread_1, &QThread::quit, Qt::DirectConnection);
     connect(&calc, &Calculate::sendCoor, &ball, &BallObj::setCenterY, Qt::DirectConnection);
     connect(&timer, &QTimer::timeout, this, &MainWindow::rp);
     calc.moveToThread(&thread_1);
@@ -65,6 +66,9 @@ void MainWindow::on_Start_clicked()
 
 void MainWindow::rp()
 {
+    if (!m_spy->isEmpty()) {
+        qDebug() << "new coordinate: " << m_spy->takeFirst();
+    }
     repaint();
 }
 
@@ -72,10 +76,10 @@ void MainWindow::on_Stop_clicked()
 {
     ball.setCond(false);
     calc.setcond(false);
-    file.setFileName("Input.txt");
     file.open(QIODevice::WriteOnly);
     QTextStream qts(&file);
     qts << ball.CenterY() << " " << calc.getBounce();
+    file.close();
 }
 
 void MainWindow::on_SpeedUp_clicked()
@@ -100,4 +104,12 @@ void MainWindow::on_SpeedDown_clicked()
         calc.setBounce(bounce_local - (10 * sign));
     }
     if (calc.getBounce() == 0) calc.setBounce(sign);
+}
+
+void MainWindow::closeEvent (QCloseEvent *event) {
+    on_Stop_clicked();
+    qDebug() << m_spy->count();
+    thread_1.wait();
+    thread_2.wait();
+    event->accept();
 }

@@ -11,31 +11,20 @@ class BallObj : public QObject
     Q_PROPERTY(QPoint center READ center WRITE setCenter NOTIFY centerChanged)
     Q_PROPERTY(int CenterY READ CenterY WRITE setCenterY NOTIFY CenterYChanged)
     bool m_cond;
-
     QPoint m_center;
     int m_CenterY;
 
 public:
     explicit BallObj(QObject *parent = nullptr);
-
     bool cond() const;
-
     QPoint center() const;
-
     int CenterY() const;
-
-    void start();
 
 signals:
     void finished();
-
     void condChanged(bool cond);
-
     void centerChanged(QPoint center);
-
     void CenterYChanged(int CenterY);
-
-    void starting();
 
 public slots:
     void run();
