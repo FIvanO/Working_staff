@@ -5,7 +5,7 @@
 int main() {
 
     int c = task();
-    int k = algo_413();
-    cout << k << endl;
+    //int k = algo_413();
+    //cout << k << endl;
     return 0;
 }

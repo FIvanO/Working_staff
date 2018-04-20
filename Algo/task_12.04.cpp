@@ -39,7 +39,6 @@ void vi_pr() {
 
 void map_pr() {
     std::map <int, int> m;
-    std::vector <int> vi;
     for (int i = 0; i < N; ++i) {
         m[i] = rand() % per;
     }
@@ -49,19 +48,16 @@ void map_pr() {
     }
     cout << endl;
 
-    for (auto k : m) {
-        if (k.second == del_sym) {
-            vi.push_back(k.first);
-        }
-    }
-    for (auto k : vi) {
-        m.erase(k);
+    auto it = m.begin();
+    while (it != m.end()) {
+        it->second == 8 ? m.erase(it++) : ++it;
     }
 
     cout << "After: " << endl;
     for (auto k : m) {
         cout << k.second << " ";
     }
+    cout << endl;
 }
 
 int task() {
