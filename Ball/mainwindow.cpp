@@ -11,26 +11,20 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+	myDb.setConnection();
     m_spy = new QSignalSpy(&calc, SIGNAL(sendCoor(int)));
     calc.setCenter(*(new QPoint(width() / 2, height() / 2)));
-    file.setFileName("Input.txt");
-    if (file.exists()) {
-        file.open(QIODevice::ReadOnly);
-        QString readY = file.readAll();
-        QStringList qsl = readY.split(' ');
-        calc.setCenter(*(new QPoint(calc.center().rx(), qsl[0].toInt())));
-        calc.setBounce(qsl[1].toInt());
-        file.close();
-    }
+	calc.setCenter(QPoint(calc.center().rx(), myDb.getY()));
+	calc.setBounce(myDb.getBounce());
     connect(&thread_1, &QThread::started, &ball, &BallObj::run);
-    connect(&thread_2, &QThread::started, &calc, &Calculate::run);
+	connect(&thread_2, &QThread::started, &calc, &Calculate::run);
     connect(&calc, &Calculate::finished, &thread_2, &QThread::quit, Qt::DirectConnection);
     connect(&ball, &BallObj::finished, &thread_1, &QThread::quit, Qt::DirectConnection);
     connect(&calc, &Calculate::sendCoor, &ball, &BallObj::setCenterY, Qt::DirectConnection);
-    connect(&timer, &QTimer::timeout, this, &MainWindow::rp);
+	connect(&timer, &QTimer::timeout, this, &MainWindow::rePaint);
     calc.moveToThread(&thread_1);
     ball.moveToThread(&thread_2);
-    timer.setInterval(50);
+	timer.setInterval(50);
 }
 
 void MainWindow::setBallCenter()
@@ -55,8 +49,6 @@ void MainWindow::paintEvent(QPaintEvent *event)
 
 void MainWindow::on_Start_clicked()
 {
-//    ball.start();
-//    calc.start();
     ball.setCond(true);
     calc.setcond(true);
     thread_1.start();
@@ -64,7 +56,7 @@ void MainWindow::on_Start_clicked()
     timer.start();
 }
 
-void MainWindow::rp()
+void MainWindow::rePaint()
 {
     if (!m_spy->isEmpty()) {
         qDebug() << "new coordinate: " << m_spy->takeFirst();
@@ -76,10 +68,8 @@ void MainWindow::on_Stop_clicked()
 {
     ball.setCond(false);
     calc.setcond(false);
-    file.open(QIODevice::WriteOnly);
-    QTextStream qts(&file);
-    qts << ball.CenterY() << " " << calc.getBounce();
-    file.close();
+	myDb.setY(ball.CenterY());
+	myDb.setBounce(calc.getBounce());
 }
 
 void MainWindow::on_SpeedUp_clicked()

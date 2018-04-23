@@ -9,23 +9,21 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     MainWindow w;
 
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+//    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 //    db.setDatabaseName("myDb.sqlite");
-
-    db.open("FIvanO", "qsewad123");
-    QSqlQuery sq("CREATE TABLE COORD ( "
-                 "  ID INT PRIMARY KEY"
-                 "  NAME TEXT");
+//    QSqlQuery sq("CREATE TABLE COORD ( "
+//                 "  ID INT PRIMARY KEY"
+//	"  NAME TEXT)");
 
 //    db.exec(sq);
 
-    if (!db.isOpen()) {
-        qDebug() << "Db isn't open!";
-        db.open();
-        db.setUserName("FIvanO");
-        db.setPassword("qsewad123");
-        db.close();
-    }
+//    if (!db.isOpen()) {
+//        qDebug() << "Db isn't open!";
+//        db.open();
+//        db.setUserName("FIvanO");
+//        db.setPassword("qsewad123");
+//        db.close();
+//    }
 
 //    QSqlQuery sq
 //    if (!db)

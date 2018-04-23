@@ -27,12 +27,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     ballobj.cpp \
-    calculate.cpp
+    calculate.cpp \
+    database.cpp
 
 HEADERS += \
         mainwindow.h \
     ballobj.h \
-    calculate.h
+    calculate.h \
+    database.h
 
 FORMS += \
         mainwindow.ui

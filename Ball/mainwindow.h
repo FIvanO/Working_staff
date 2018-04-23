@@ -8,6 +8,7 @@
 #include <QTimer>
 #include <QFile>
 #include <QSignalSpy>
+#include "database.h"
 
 namespace Ui {
 class MainWindow;
@@ -27,12 +28,9 @@ protected:
 
 private slots:
     void on_Start_clicked();
-    void rp();
-
+	void rePaint();
     void on_Stop_clicked();
-
     void on_SpeedUp_clicked();
-
     void on_SpeedDown_clicked();
 
 private:
@@ -44,7 +42,7 @@ private:
     BallObj ball;
     Calculate calc;
     QTimer timer;
-    QFile file;
+	DataBase myDb;
 };
 
 #endif // MAINWINDOW_H
