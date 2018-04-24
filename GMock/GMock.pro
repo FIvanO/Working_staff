@@ -4,6 +4,22 @@ QT += testlib
 CONFIG += c++11 console
 CONFIG -= app_bundle
 
+
+GTEST_SRCDIR = /usr/src/gtest
+GMOCK_SRCDIR = /usr/src/gmock
+
+requires(exists($$GTEST_SRCDIR):exists($$GMOCK_SRCDIR))
+
+INCLUDEPATH *= \
+$$GTEST_SRCDIR \
+$$GTEST_SRCDIR/include \
+$$GMOCK_SRCDIR \
+$$GMOCK_SRCDIR/include
+
+SOURCES += \
+$$GTEST_SRCDIR/src/gtest-all.cc \
+$$GMOCK_SRCDIR/src/gmock-all.cc
+
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the

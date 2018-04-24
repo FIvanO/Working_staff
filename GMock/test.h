@@ -5,10 +5,26 @@
 
 using namespace testing;
 
-TEST(Test, Test) {
+TEST(Test1, Test1) {
 	MockCalculateDirection m;
-	EXPECT_CALL(m, calculate(4)).WillOnce(Return(0));
-	EXPECT_CALL(m, calculate(5)).WillOnce(Return(1));
-	EXPECT_CALL(m, calculate(6)).WillOnce(Return(2));
-	EXPECT_CALL(m, calculate(7)).WillOnce(Return(3));
+	int var = 4;
+	EXPECT_CALL(m, calculate(var)).WillOnce(Return(0));
+	Drawer drawer;
+	ASSERT_TRUE(drawer.draw(m, var));
+}
+
+TEST(Test2, Test2) {
+	MockCalculateDirection m;
+	int var = 5;
+	Drawer drawer;
+	EXPECT_CALL(m, calculate(var)).WillOnce(Return(5));
+	ASSERT_TRUE(drawer.draw(m, var));
+}
+
+TEST(Test3, Test3) {
+	MockCalculateDirection m;
+	int var = 6;
+	Drawer drawer;
+	EXPECT_CALL(m, calculate(var)).WillOnce(Return(2));
+	ASSERT_TRUE(drawer.draw(m, var));
 }

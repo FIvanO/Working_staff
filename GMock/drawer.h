@@ -1,10 +1,11 @@
 #ifndef DRAWER_H
 #define DRAWER_H
+#include "calculatedirection.h"
 
 class Drawer
 {
-	void draw(int dir);
 public:
+	bool draw(CalculateDirection &dir, int var);
 	Drawer();
 };
 
