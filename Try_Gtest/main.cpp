@@ -2,8 +2,8 @@
 
 class SomeMathFunc : public testing::TestWithParam<int>  {
 public:
-    int fact(int n);
-    int gcd(int a, int b);
+	int fact(int n);
+	int gcd(int a, int b);
 };
 
 int SomeMathFunc::fact(int n) {

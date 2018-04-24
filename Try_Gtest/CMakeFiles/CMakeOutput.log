@@ -776,3 +776,31 @@ Linking C executable cmTC_f729c
 make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8842a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8842a.dir/build.make CMakeFiles/cmTC_8842a.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8842a.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_8842a.dir/CheckIncludeFile.c.o   -c /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_8842a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8842a.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_8842a.dir/CheckIncludeFile.c.o  -o cmTC_8842a -rdynamic 
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_606dc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_606dc.dir/build.make CMakeFiles/cmTC_606dc.dir/build
+make[1]: Entering directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_606dc.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_606dc.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_606dc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_606dc.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_606dc.dir/CheckFunctionExists.c.o  -o cmTC_606dc -rdynamic -lpthread 
+make[1]: Leaving directory '/home/fivano/FIvanO/Working_staff/Try_Gtest/CMakeFiles/CMakeTmp'
+
+
