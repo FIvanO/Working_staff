@@ -11,6 +11,8 @@ gtest/gtest.h
 -
 
 /home/fivano/FIvanO/Working_staff/Try_Gtest/tests.cpp
+vector
+-
 main.cpp
 /home/fivano/FIvanO/Working_staff/Try_Gtest/main.cpp
 gtest/gtest.h
