@@ -32,6 +32,7 @@ private slots:
     void on_Stop_clicked();
     void on_SpeedUp_clicked();
     void on_SpeedDown_clicked();
+	void check();
 
 private:
     void closeEvent (QCloseEvent *event);
@@ -43,6 +44,7 @@ private:
     Calculate calc;
     QTimer timer;
 	DataBase myDb;
+	DataBase myGlobalDb;
 };
 
 #endif // MAINWINDOW_H

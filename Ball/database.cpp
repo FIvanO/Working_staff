@@ -19,6 +19,25 @@ void DataBase::newConnection()
 	db.open();
 }
 
+void DataBase::newGlobalConnection()
+{
+	db = QSqlDatabase::addDatabase("QSQLITE");
+	db.setHostName("Global");
+	db.setPort("2020");
+	db.setUserName("FIvanO");
+	db.open();
+}
+
+void DataBase::init()
+{
+	QMap<QString, QString> myMap;
+	myMap["y"] = "integer";
+	createTable("ball_y", "integer", myMap);
+	myMap.clear();
+	myMap["bounce"] = "integer";
+	createTable("ball_bounce", "integer", myMap);
+}
+
 bool DataBase::isExist()
 {
 	return QFile(QDir::currentPath() + "dataBase.db").exists();
@@ -29,13 +48,17 @@ void DataBase::setConnection()
 {
 	if (!isExist()) {
 		newConnection();
-		QMap<QString, QString> myMap;
-		myMap["y"] = "integer";
-		createTable("ball_y", "integer", myMap);
-		myMap.clear();
-		myMap["bounce"] = "integer";
-		createTable("ball_bounce", "integer", myMap);
+		init();
+	} else {
+		db.open();
+	}
+}
 
+void DataBase::setGlobalConnection()
+{
+	if (!db.open()) {
+		newGlobalConnection();
+		init();
 	} else {
 		db.open();
 	}
@@ -57,7 +80,6 @@ void DataBase::createTable(QString tableName, QString primaryKeyType, QMap<QStri
 int DataBase::getY()
 {
 	QSqlQuery query("SELECT y FROM ball_y;", db);
-	//qDebug() << query.lastError();
 	if (query.next()) {
 		return query.value(0).toInt();
 	}

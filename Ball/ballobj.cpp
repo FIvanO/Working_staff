@@ -18,13 +18,11 @@ int BallObj::CenterY() const
     return m_CenterY;
 }
 
-void BallObj::run()
+void BallObj::processing()
 {
-    while (cond()) {
-        qDebug() << "Thread 2 is working";
-        QThread::msleep(100);
-    }
-    emit finished();
+	if (!cond()) {
+		emit finished();
+	}
 }
 
 void BallObj::setCond(bool cond)

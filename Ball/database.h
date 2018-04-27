@@ -13,6 +13,7 @@ class DataBase : public QObject
 public:
 	explicit DataBase(QObject *parent = nullptr);
 	void setConnection();
+	void setGlobalConnection();
 	int getY();
 	void setY(int _y);
 	void setBounce(int _bounce);
@@ -26,6 +27,8 @@ public slots:
 private:
 	QSqlDatabase db;
 	void newConnection();
+	void newGlobalConnection();
+	void init();
 	bool isExist();
 };
 

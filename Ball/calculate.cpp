@@ -29,8 +29,8 @@ QPoint Calculate::center() const
 bool Calculate::floor_roof(bool flag)
 {
     int sign = getBounce() / abs(getBounce());
-    if (center().ry() + getRad() + getBounce() >= QApplication::activeWindow()->height() && flag && sign == 1) {
-        m_center.setY(QApplication::activeWindow()->height() - getRad());
+	if (center().ry() + getRad() + getBounce() >= QApplication::activeWindow()->height() && flag && sign == 1) {
+		m_center.setY(QApplication::activeWindow()->height() - getRad());
         emit sendCoor(m_center.ry());
         setBounce(getBounce() * (-1));
         return false;
@@ -39,28 +39,25 @@ bool Calculate::floor_roof(bool flag)
         m_center.setY(getRad() + getRad() / 4);
         emit sendCoor(m_center.ry());
         setBounce(getBounce() * (-1));
-        return false;
+		return false;
     }
     return true;
 }
 
-void Calculate::run()
+void Calculate::processing()
 {
-    bool flag = false;
-    while (cond()) {
-        qDebug() << "Thread 1 is working";
+	bool flag = true;
+	if (cond()) {
         flag = floor_roof(flag);
         if (!flag) {
-            continue;
-        }
+			return ;
+		}
         flag = true;
         m_center.setY(m_center.ry() + getBounce());
-        qDebug() << "Coordinate: " << m_center.ry();
-        qDebug() << "Bounce: " << bounce;
         emit sendCoor(m_center.ry());
-        QThread::msleep(100);
-    }
-    emit finished();
+	} else {
+		emit finished();
+	}
 }
 
 void Calculate::setcond(bool cond)

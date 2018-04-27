@@ -31,7 +31,7 @@ signals:
     void centerChanged(QPoint center);
 
 public slots:
-    void run();
+	void processing();
     void setcond(bool cond);
     void setBounce(int b);
     void setCenter(QPoint center);

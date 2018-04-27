@@ -27,7 +27,7 @@ signals:
     void CenterYChanged(int CenterY);
 
 public slots:
-    void run();
+	void processing();
     void setCond(bool cond);
     void setCenter(QPoint center);
     void setCenterY(int CenterY);
