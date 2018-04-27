@@ -11,7 +11,12 @@ QMainWindow(parent),
 ui(new Ui::MainWindow)
 {
 	ui->setupUi(this);
+	myGlobalDb.setGlobalConnection();
+	int curr_Y = myGlobalDb.getY();
+	int curr_Bounce = myGlobalDb.getBounce();
 	myDb.setConnection();
+	myDb.setY(curr_Y);
+	myDb.setBounce(curr_Bounce);
 	m_spy = new QSignalSpy(&calc, SIGNAL(sendCoor(int)));
 	calc.setCenter(*(new QPoint(width() / 2, height() / 2)));
 	calc.setCenter(QPoint(calc.center().rx(), myDb.getY()));
@@ -73,6 +78,11 @@ void MainWindow::rePaint()
 
 void MainWindow::on_Stop_clicked()
 {
+	int curr_Y = myDb.getY();
+	int curr_Bounce = myDb.getBounce();
+	myGlobalDb.setGlobalConnection();
+	myGlobalDb.setY(curr_Y);
+	myGlobalDb.setBounce(curr_Bounce);
 	ball.setCond(false);
 	calc.setcond(false);
 }
