@@ -50,7 +50,7 @@ void map_pr() {
 
     auto it = m.begin();
     while (it != m.end()) {
-        it->second == 8 ? m.erase(it++) : ++it;
+        it->second == del_sym ? m.erase(it++) : ++it;
     }
 
     cout << "After: " << endl;
