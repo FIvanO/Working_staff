@@ -8,7 +8,8 @@ public:
 	int gcd(int a, int b);
 };
 
-class SomeMathFuncForParametr : public SomeMathFunc, public ::testing::WithParamInterface<std::pair <int, int> > {
+class SomeMathFuncForParametr : public SomeMathFunc,
+public ::testing::WithParamInterface<std::pair <int, int> > {
 
 };
 

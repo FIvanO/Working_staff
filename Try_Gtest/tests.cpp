@@ -7,12 +7,12 @@ std::vector < std::pair <int, int> > vi = {
 { 1, 1 }, { 6, 3}, { 3628800, 10 }, { 1, 0 }
 };
 
+INSTANTIATE_TEST_CASE_P(ParametrTest1, SomeMathFuncForParametr, ::testing::ValuesIn(vi));
+
 TEST_P(SomeMathFuncForParametr, ParametrTestFactCorrect) {
 	std::pair <int, int> test_case = GetParam();
 	EXPECT_EQ(test_case.first, fact(test_case.second));
 }
-
-INSTANTIATE_TEST_CASE_P(ParametrTest1, SomeMathFuncForParametr, ::testing::ValuesIn(vi));
 
 TEST_F(SomeMathFunc, fewPositiveCorrect) {
 	EXPECT_EQ(1, fact(1));
