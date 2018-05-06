@@ -74,7 +74,7 @@ void DataBase::createTable(QString tableName, QString primaryKeyType, QMap<QStri
 	newTable += ");";
 	QSqlQuery query(newTable, db);
 	QSqlQuery ins(db);
-	ins.prepare("INSERT INTO " % tableName % "(id, " % columnNameType.begin().key() % " ) VALUES(0, 10);");
+	ins.prepare("INSERT INTO " % tableName % "(id, " % columnNameType.begin().key() % " ) VALUES(0, 40);");
 	ins.exec();
 }
 
@@ -84,6 +84,7 @@ int DataBase::getY()
 	if (query.next()) {
 		return query.value(0).toInt();
 	}
+	return 0;
 }
 
 void DataBase::setY(int _y)
@@ -108,4 +109,5 @@ int DataBase::getBounce()
 	if (query.next()) {
 		return query.value(0).toInt();
 	}
+	return 0;
 }
