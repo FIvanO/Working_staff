@@ -6,6 +6,7 @@
 #include <QMap>
 #include <QDebug>
 #include <QSqlError>
+#include <QThread>
 
 DataBase::DataBase(QObject *parent) : QObject(parent)
 {
@@ -100,11 +101,17 @@ void DataBase::setY(int _y)
 void DataBase::setBounce(int _bounce)
 {
 	QSqlQuery upd(db);
+	qDebug() << 2 << "ygfytgij " << QThread::currentThread();
 	dataBaseUpdatesCount++;
 	qDebug() << "Update ball_bounce " << dataBaseUpdatesCount;
 	upd.prepare("UPDATE ball_bounce set bounce = :bounce WHERE id = 0;");
 	upd.bindValue(":bounce", _bounce);
 	upd.exec();
+}
+
+void DataBase::finish()
+{
+	emit localFinished();
 }
 
 int DataBase::getBounce()

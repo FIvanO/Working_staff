@@ -16,13 +16,15 @@ public:
 	void setGlobalConnection();
 	int getY();
 	void setY(int _y);
-	void setBounce(int _bounce);
 	int getBounce();
 	void createTable(QString tableName, QString primaryKeyType,	QMap<QString, QString> &columnNameType);
 
 signals:
+	void localFinished();
 
 public slots:
+	void setBounce(int _bounce);
+	void finish();
 
 private:
 	QSqlDatabase db;

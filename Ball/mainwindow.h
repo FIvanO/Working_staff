@@ -26,6 +26,9 @@ public:
 protected:
     void paintEvent(QPaintEvent *event);
 
+signals:
+	void localDbUpd(int upd_value);
+
 public slots:
 	void localDbBounceUpd();
 
@@ -43,10 +46,11 @@ private:
     Ui::MainWindow *ui;
     QThread thread_1;
     QThread thread_2;
-    BallObj ball;
-    Calculate calc;
+	QThread thread_3;
+	BallObj *ball;
+	Calculate *calc;
     QTimer timer;
-	DataBase myDb;
+	DataBase *myDb;
 	DataBase myGlobalDb;
 };
 
