@@ -71,7 +71,11 @@ void Calculate::setcond(bool cond)
 
 void Calculate::setBounce(int b)
 {
-    bounce = b;
+	if (b == bounce)
+		return ;
+
+	bounce = b;
+	emit bounceChanged(bounce);
 }
 
 void Calculate::setCenter(QPoint center)

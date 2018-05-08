@@ -26,6 +26,9 @@ public:
 protected:
     void paintEvent(QPaintEvent *event);
 
+public slots:
+	void localDbBounceUpd();
+
 private slots:
     void on_Start_clicked();
 	void rePaint();

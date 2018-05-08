@@ -24,12 +24,13 @@ ui(new Ui::MainWindow)
 	connect(&calc, &Calculate::finished, &thread_2, &QThread::quit, Qt::DirectConnection);
 	connect(&ball, &BallObj::finished, &thread_1, &QThread::quit, Qt::DirectConnection);
 	connect(&calc, &Calculate::sendCoor, &ball, &BallObj::setCenterY, Qt::DirectConnection);
+	connect(&calc, &Calculate::bounceChanged, this, &MainWindow::localDbBounceUpd);
 	connect(&timer, &QTimer::timeout, this, &MainWindow::rePaint);
 	connect(&calc, &Calculate::condChanged, &calc, &Calculate::processing);
 	connect(&ball, &BallObj::condChanged, &ball, &BallObj::processing);
 	calc.moveToThread(&thread_1);
 	ball.moveToThread(&thread_2);
-	timer.setInterval(50);
+	timer.setInterval(40);
 }
 
 void MainWindow::setBallCenter()
@@ -50,6 +51,11 @@ void MainWindow::paintEvent(QPaintEvent *event)
 	painter.setPen(QPen(Qt::green));
 	painter.setBrush(QBrush(Qt::green));
 	painter.drawEllipse(ball.center(), calc.getRad(), calc.getRad());
+}
+
+void MainWindow::localDbBounceUpd()
+{
+	myDb.setBounce(calc.getBounce());
 }
 
 void MainWindow::on_Start_clicked()

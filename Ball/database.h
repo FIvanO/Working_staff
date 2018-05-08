@@ -26,6 +26,7 @@ public slots:
 
 private:
 	QSqlDatabase db;
+	int dataBaseUpdatesCount = 0;
 	void newConnection();
 	void newGlobalConnection();
 	void init();

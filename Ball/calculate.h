@@ -29,6 +29,7 @@ signals:
     void finished();
     void sendCoor(int y);
     void centerChanged(QPoint center);
+	void bounceChanged(int b);
 
 public slots:
 	void processing();
