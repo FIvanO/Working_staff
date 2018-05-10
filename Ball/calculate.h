@@ -16,7 +16,7 @@ class Calculate : public QObject
     QPoint m_center;
 
 public:
-    explicit Calculate(QObject *parent = nullptr);
+	explicit Calculate(QObject *parent, QPoint pt);
     bool cond() const;
     QPoint center() const;
     int getBounce() const;

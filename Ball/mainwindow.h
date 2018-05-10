@@ -21,16 +21,24 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     void setBallCenter();
+	void preProcessing();
     ~MainWindow();
 
 protected:
     void paintEvent(QPaintEvent *event);
 
 signals:
-	void localDbUpd(int upd_value);
+	void s_localDbBounceUpd(int upd_value);
+	void s_localDbYUpd(int upd_value);
+	void s_calculateProcessing();
+	void s_ballObjProcessing();
+	void s_setBallCenter(QPoint p);
 
 public slots:
 	void localDbBounceUpd();
+	void localDbYUpd();
+	void calculateProcessing();
+	void ballObjProcessing();
 
 private slots:
     void on_Start_clicked();

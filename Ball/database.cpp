@@ -91,8 +91,9 @@ int DataBase::getY()
 void DataBase::setY(int _y)
 {
 	QSqlQuery upd(db);
+//	QThread::sleep(10);
 	dataBaseUpdatesCount++;
-	qDebug() << "Update ball_y " << dataBaseUpdatesCount;
+//	qDebug() << "Update ball_y " << dataBaseUpdatesCount;
 	upd.prepare("UPDATE ball_y set y = :y WHERE id = 0;");
 	upd.bindValue(":y", _y);
 	upd.exec();
@@ -101,9 +102,10 @@ void DataBase::setY(int _y)
 void DataBase::setBounce(int _bounce)
 {
 	QSqlQuery upd(db);
-	qDebug() << 2 << "ygfytgij " << QThread::currentThread();
+//	QThread::sleep(10);
+//	qDebug() << 2 << "ygfytgij " << QThread::currentThread();
 	dataBaseUpdatesCount++;
-	qDebug() << "Update ball_bounce " << dataBaseUpdatesCount;
+//	qDebug() << "Update ball_bounce " << dataBaseUpdatesCount;
 	upd.prepare("UPDATE ball_bounce set bounce = :bounce WHERE id = 0;");
 	upd.bindValue(":bounce", _bounce);
 	upd.exec();

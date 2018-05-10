@@ -15,7 +15,7 @@ class BallObj : public QObject
     int m_CenterY;
 
 public:
-    explicit BallObj(QObject *parent = nullptr);
+	explicit BallObj(QObject *parent, QPoint pt);
     bool cond() const;
     QPoint center() const;
     int CenterY() const;

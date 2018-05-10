@@ -2,7 +2,7 @@
 #include <QDebug>
 #include <QThread>
 
-BallObj::BallObj(QObject *parent) : QObject(parent), m_center(120, 120) {}
+BallObj::BallObj(QObject *parent, QPoint pt) : QObject(parent), m_center(pt) {}
 bool BallObj::cond() const
 {
     return m_cond;

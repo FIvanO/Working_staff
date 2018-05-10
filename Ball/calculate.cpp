@@ -4,7 +4,7 @@
 #include <QDebug>
 #include <QThread>
 
-Calculate::Calculate(QObject *parent) : QObject(parent), bounce(10), rad(40) {}
+Calculate::Calculate(QObject *parent, QPoint pt) : QObject(parent), bounce(10), rad(40), m_center(pt) {}
 
 int Calculate::getBounce() const
 {
