@@ -35,9 +35,11 @@ void DataBase::init()
 	QMap<QString, QString> myMap;
 	myMap["y"] = "integer";
 	createTable("ball_y", "integer", myMap);
+	setY(215);
 	myMap.clear();
 	myMap["bounce"] = "integer";
 	createTable("ball_bounce", "integer", myMap);
+	setBounce(10);
 }
 
 bool DataBase::isExist()
@@ -75,7 +77,7 @@ void DataBase::createTable(QString tableName, QString primaryKeyType, QMap<QStri
 	newTable += ");";
 	QSqlQuery query(newTable, db);
 	QSqlQuery ins(db);
-	ins.prepare("INSERT INTO " % tableName % "(id, " % columnNameType.begin().key() % " ) VALUES(0, 40);");
+	ins.prepare("INSERT INTO " % tableName % "(id, " % columnNameType.begin().key() % " ) VALUES(0, 0);");
 	ins.exec();
 }
 

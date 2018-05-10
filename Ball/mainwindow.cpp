@@ -72,7 +72,6 @@ void MainWindow::paintEvent(QPaintEvent *event)
 
 void MainWindow::localDbBounceUpd()
 {
-//	qDebug() << 1 << " " << QThread::currentThread();
 	emit s_localDbBounceUpd(calc->getBounce());
 }
 
