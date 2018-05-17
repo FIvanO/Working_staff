@@ -15,10 +15,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    algo_4.1.2.cpp \
-    algo_4.1.1.cpp \
-    main.cpp \
-    algo_4.1.3.cpp \
-    task_12.04.cpp
+    main.cpp
 
 DISTFILES +=
+
+HEADERS += \
+    algo_4.1.1.h \
+    algo_4.1.2.h \
+    algo_4.1.3.h \
+    algo_4.3.1.h \
+    algo_6.1.1.h \
+    algo_6.4.1.h \
+    task_12.04.h

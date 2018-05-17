@@ -1,3 +1,6 @@
+#ifndef ALGO_6_4_1_H
+#define ALGO_6_4_1_H
+
 #include <iostream>
 
 using namespace std;
@@ -20,3 +23,6 @@ int algo641() {
 	cout << ans << endl;
 	return 0;
 }
+
+
+#endif // ALGO_6_4_1_H

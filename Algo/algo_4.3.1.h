@@ -1,3 +1,6 @@
+#ifndef ALGO_4_3_1_H
+#define ALGO_4_3_1_H
+
 #include <iostream>
 #include <string>
 #include <set>
@@ -26,3 +29,6 @@ int algo431() {
 
 	return 0;
 }
+
+
+#endif // ALGO_4_3_1_H

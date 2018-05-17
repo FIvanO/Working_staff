@@ -1,3 +1,6 @@
+#ifndef ALGO_6_1_1_H
+#define ALGO_6_1_1_H
+
 #include <algorithm>
 #include <cassert>
 #include <iostream>
@@ -51,3 +54,6 @@ int algo611() {
 	}
 	std::cout << std::endl;
 }
+
+
+#endif // ALGO_6_1_1_H
