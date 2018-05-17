@@ -14,15 +14,17 @@ int letterW(char l) { // calculate weight for every letter
 	return int(l - 'A') + 1;
 }
 
-LL calculateDictionary(const string &input) {
+LL calculateDictionary(const string &inputFile) {
+	string input = "../" + inputFile;
+	freopen(input.c_str(), "r", stdin); // for reading our input string
 	map<string, int> weidth; // weidth for every word
-	int l = input.length();
 
+	char c;
 	bool start = false; // should be true, when we start reading the next word, else false
 	string word = ""; // for making word from input string
 	int weidth_ = 0; // for calculating weidth for each word
-	for (int i = 0; i < l; ++i) {
-		if (input[i] == '\"') { // if we read a " we changing our state (variable start)
+	while (cin >> c) {
+		if (c == '\"') { // if we read a " we changing our state (variable start)
 			if (!start) { // it will be a new word
 				start = true;
 				continue;
@@ -36,8 +38,8 @@ LL calculateDictionary(const string &input) {
 		}
 
 		if (start) { // our state is reading a word (start = true)
-			word += input[i]; // making a word
-			weidth_ += letterW(input[i]); // calculating weidth of word
+			word += c; // making a word
+			weidth_ += letterW(c); // calculating weidth of word
 		}
 	}
 
@@ -53,10 +55,7 @@ LL calculateDictionary(const string &input) {
 
 int main()
 {
-	freopen("../Input.txt", "r", stdin); // for reading our input string
-
-	string s;
-	getline(cin, s); // must to use getline because of empty symbols
-	cout << calculateDictionary(s) << endl;
+	string inputFile = "Input.txt"; // input file name, should be in the folder with project folder
+	cout << calculateDictionary(inputFile) << endl;
 	return 0;
 }
